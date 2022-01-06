@@ -1,0 +1,274 @@
+/*----------------------------------------------------FONTS----------------------------------------------*/
+
+/*Lora */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/*---------------------------------------------------------------------------------------------------------*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #181719;
+    color: #FFFFFF;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    z-index: 999;
+}
+
+.brand-title {
+    font-family: 'Lora';
+    font-size: 20px;
+    margin: 10px;
+    padding: 20px;
+    border: solid white 1px;
+
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 50px;
+    display: block;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+.container {
+    padding-top: 100px;
+    width: 90%;
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-areas: "main side"
+        "footer footer";
+
+}
+
+.main h1 {
+    font-family: 'Lora';
+    font-size: 48px;
+
+}
+
+.main {
+    padding-top: 180px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    width: 410px;
+    grid-area: main;
+}
+
+.side {
+    grid-area: side;
+    padding-left: 40px;
+}
+
+.portrait {
+    width: 1100px;
+    padding-left: 200px;
+    height: 700px;
+}
+
+
+.main__right {
+    flex: 2;
+    height: 555px;
+    position: relative;
+}
+
+.main__right__card {
+    position: absolute;
+    bottom: 2%;
+    right: 7%;
+    background: #181719;
+    padding: 23px 10px 26px 34px;
+    color: #ffffff;
+    width: 410px;
+    height: 189px;
+    box-shadow: 10px 5px 5px black;
+}
+
+.main__right__card>h3 {
+    font-family: "Lora", serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+    margin-top: 30px;
+    width: 287px;
+    height: 62px;
+}
+
+.main__right__profile {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main__right__profile__imgWrapper {
+    padding-left: 2px;
+    padding-right: 18px;
+}
+
+.main__right__profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.main__right__profile__info h5 {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 8px;
+    margin-top: 5px;
+}
+
+.main__right__profile__info p {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #828282;
+}
+
+footer {
+    justify-self: center;
+    grid-area: footer;
+    padding-top: 60px;
+}
+
+@media (max-width:425px) {
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 1;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .container {
+        padding: 0;
+        display: block;
+    }
+
+    .side {
+        padding: 12px;
+
+    }
+
+    .main {
+        padding-top: 0;
+        width: auto;
+    }
+
+    .main h1 {
+        font-size: 36px;
+    }
+
+    .main p {
+        padding-right: 140px;
+        font-size: 14px;
+    }
+
+    .portrait {
+        width: 100%;
+        padding-left: 0;
+        height: auto;
+    }
+
+    .main__right__card {
+        position: absolute;
+        width: 51%;
+        padding: 11px 10px 5px 17px;
+        height: auto;
+        bottom: -18px;
+        left: 60px;
+        
+    }
+
+    .main__right__card>h3 {
+        width: auto;
+        height: auto;
+        margin-top: 0;
+        font-size: 10px;
+
+    }
+
+    .main__right__profile__info h5{
+        font-size: 10px;
+    }
+    .main__right__profile__info p{
+        font-size: 8px;
+    }
+
+    .footer{
+        padding-top:40px;
+        padding-left:20px;
+    }
+}
